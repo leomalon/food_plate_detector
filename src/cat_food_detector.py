@@ -44,17 +44,16 @@ print("Model loaded successfully!\n")
 # -----------------------------------------------------
 # 3. Training section
 # -----------------------------------------------------
-DATA_YAML = r"C:\Users\rmalon\Downloads\PYTHON SCRIPT\proyectos_personales\proyectos_locales\Computer vision\data.yaml"
+DATA_YAML = "path/data.yaml"
 
 
 # training the model
-results = model.train(data=r"C:\Users\rmalon\Downloads\PYTHON SCRIPT\proyectos_personales\proyectos_locales\Computer vision\data.yaml", 
-                      epochs=60, imgsz=640,device=DEVICE)
+results = model.train(data=DATA_YAML, epochs=60, imgsz=640,device=DEVICE)
 
 # -----------------------------------------------------
 # 4. Testing the trained model
 # -----------------------------------------------------
-best_trained_model = YOLO(r"C:\Users\rmalon\Downloads\PYTHON SCRIPT\proyectos_personales\proyectos_locales\Computer vision\runs\detect\train2\weights\best.pt")
+best_trained_model = YOLO("../best.pt")
 
 # -----------------------------------------------------
 # 5. Real-time detection using webcam
